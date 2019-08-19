@@ -1,0 +1,251 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("9933333-ABC-series-Water-Liquid-Letter-Capital-C-Stock-Vector.jpg");
+height:100%;}
+</style>
+</head>
+
+<body>
+<h1 style="text-align:center">STRUCTURES & UNIONS IN C</h1><hr color="black">
+<h1 style="font-family:Jokerman">STRUCTURES ---></h1><br><br>
+<h2>
+Arrays allow to define type of variables that can hold several data items of the same kind. Similarly structure is another user defined data type available in C that allows to combine data items of different kinds.
+<br><br>
+Structures are used to represent a record. Suppose you want to keep track of your books in a library. You might want to track the following attributes about each book -
+<br>
+    <br>**Title
+    <br>**Author
+    <br>**Subject
+    <br>**Book ID
+<hr>
+<h1>Defining a Structure</h1>
+<br>
+<h2>To define a structure, you must use the struct statement. The struct statement defines a new data type, with more than one member. The format of the struct statement is as follows -
+</h2><div style="border:2px solid purple">
+<code><h2>
+<br>struct [structure tag] <br>{
+
+<br>   member definition;
+  <br> member definition;
+   <br>...
+  <br> member definition;
+<br>}<br> [one or more structure variables];  
+</code>
+</h2>
+</div>
+
+<hr><h2>The structure tag is optional and each member definition is a normal variable definition, such as <br>int i;<br> or float f;<br> or any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional. Here is the way you would declare the Book structure -</h2>
+<div style="border:2px solid purple">
+<code><h2>
+struct Books<br> {
+   <br>char  title[50];
+   <br>char  author[50];
+   <br>char  subject[100];
+ <br>  int   book_id;
+<br>} book;  
+</h2>
+</code>
+</div>
+<br>
+<br>
+<h1 style="text-align:center">Accessing Structure Members ---></h1><hr>
+
+<h2>To access any member of a structure, we use the member access operator (.). <br>The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. <br>You would use the keyword "STRUCT" to define variables of structure type. The following example shows how to use a structure in a program -</h2>
+<div style="border:2px solid purple"><code><h2>
+<br>#include <stdio.h>
+<br>#include <string.h>
+ 
+<br>struct Books {
+   <br>char  title[50];
+   <br>char  author[50];
+   <br>char  subject[100];
+   <br>int   book_id;
+<br>};
+ 
+<br>int main( )<br> {
+
+<br>   struct Books Book1;        /* Declare Book1 of type Book */
+   <br>struct Books Book2;        /* Declare Book2 of type Book */
+ 
+ <br>  /* book 1 specification */
+   <br>strcpy( Book1.title, "C Programming");
+   <br>strcpy( Book1.author, "Nuha Ali"); 
+   <br>strcpy( Book1.subject, "C Programming Tutorial");
+  <br> Book1.book_id = 6495407;
+
+<br>   /* book 2 specification */
+   <br>strcpy( Book2.title, "Telecom Billing");
+   <br>strcpy( Book2.author, "Zara Ali");
+   <br>strcpy( Book2.subject, "Telecom Billing Tutorial");
+   <br>Book2.book_id = 6495700;
+ 
+<br>   /* print Book1 info */
+   <br>printf( "Book 1 title : %s\n", Book1.title);
+   <br>printf( "Book 1 author : %s\n", Book1.author);
+   <br>printf( "Book 1 subject : %s\n", Book1.subject);
+   <br>printf( "Book 1 book_id : %d\n", Book1.book_id);
+
+ <br>  /* print Book2 info */
+   <br>printf( "Book 2 title : %s\n", Book2.title);
+   <br>printf( "Book 2 author : %s\n", Book2.author);
+   <br>printf( "Book 2 subject : %s\n", Book2.subject);
+   <br>printf( "Book 2 book_id : %d\n", Book2.book_id);
+
+ <br>  return 0;
+<br>}
+<hr>
+When the above code is compiled and executed, it produces the following result -
+<br><br>
+Book 1 title : C Programming
+<br>Book 1 author : Nuha Ali
+<br>Book 1 subject : C Programming Tutorial
+<br>Book 1 book_id : 6495407
+<br>Book 2 title : Telecom Billing
+<br>Book 2 author : Zara Ali
+<br>Book 2 subject : Telecom Billing Tutorial
+<br>Book 2 book_id : 6495700
+</h2>
+</code>
+</div>
+<h1 style="text-align:center">Structures as Function Arguments ---></h1>
+<hr>
+<hr><h2>You can pass a structure as a function argument in the same way as you pass any other variable or pointer.</h2>
+<div style="border:2px solid purple"><code><h2>
+
+<br>#include <stdio.h>
+<br>#include <string.h>
+ 
+<br>struct Books<br> {
+   <br>char  title[50];
+   <br>char  author[50];
+   <br>char  subject[100];
+   <br>int   book_id;
+<br>};
+
+<br>/* function declaration */
+<br>void printBook( struct Books book );
+
+<br>int main( ) <br>{
+
+   <br>struct Books Book1;        /* Declare Book1 of type Book */
+  <br> struct Books Book2;        /* Declare Book2 of type Book */
+ 
+   <br>/* book 1 specification */
+   <br>strcpy( Book1.title, "C Programming");
+   <br>strcpy( Book1.author, "Nuha Ali"); 
+   <br>strcpy( Book1.subject, "C Programming Tutorial");
+   <br>Book1.book_id = 6495407;
+
+   <br>/* book 2 specification */
+   <br>strcpy( Book2.title, "Telecom Billing");
+   <br>strcpy( Book2.author, "Zara Ali");
+   <br>strcpy( Book2.subject, "Telecom Billing Tutorial");
+  <br> Book2.book_id = 6495700;
+ 
+   <br>/* print Book1 info */
+<br>   printBook( Book1 );
+
+   <br>/* Print Book2 info */
+<br>   printBook( Book2 );
+
+   <br>return 0;
+<br>}
+
+<br>void printBook( struct Books book ) {
+<br>
+   <br>printf( "Book title : %s\n", book.title);
+   <br>printf( "Book author : %s\n", book.author);
+   <br>printf( "Book subject : %s\n", book.subject);
+   <br>printf( "Book book_id : %d\n", book.book_id);
+<br>}
+<hr>
+<br><br>When the above code is compiled and executed, it produces the following result -
+<br>
+<br>Book title : C Programming
+<br>Book author : Nuha Ali
+<br>Book subject : C Programming Tutorial
+<br>Book book_id : 6495407
+<br>Book title : Telecom Billing
+<br>Book author : Zara Ali
+<br>Book subject : Telecom Billing Tutorial
+<br>Book book_id : 6495700
+</h2></code></div><hr>
+<h1>Pointers to Structures ---></h1>
+
+<h2>You can define pointers to structures in the same way as you define pointer to any other variable -
+
+<br><i>struct Books *struct_pointer;</i>
+
+<br>Now, you can store the address of a structure variable in the above defined pointer variable. To find the address of a structure variable, place the '&'; operator before the structure's name as follows -
+
+<br><i>struct_pointer = &Book1;</i>
+
+<br>To access the members of a structure using a pointer to that structure, you must use the ? operator as follows -
+
+<br><i>struct_pointer->title;</i>
+
+<br>Let us re-write the above example using structure pointer.
+<br><br>
+<div style="border:2px solid purple"><code>
+<br>
+<br><h2>#include <stdio.h>
+<br>#include <string.h>
+ 
+<br>struct Books {
+   <br>char  title[50];
+   <br>char  author[50];
+   <br>char  subject[100];
+   <br>int   book_id;
+<br>};
+
+<br>/* function declaration */
+<br>void printBook( struct Books *book );
+<br>int main( )<br> {
+
+<br>   struct Books Book1;        /* Declare Book1 of type Book */
+   <br>struct Books Book2;        /* Declare Book2 of type Book */
+ 
+ <br>  /* book 1 specification */
+   <br>strcpy( Book1.title, "C Programming");
+   <br>strcpy( Book1.author, "Nuha Ali"); 
+   <br>strcpy( Book1.subject, "C Programming Tutorial");
+   <br>Book1.book_id = 6495407;
+
+<br>   /* book 2 specification */
+   <br>strcpy( Book2.title, "Telecom Billing");
+   <br>strcpy( Book2.author, "Zara Ali");
+   <br>strcpy( Book2.subject, "Telecom Billing Tutorial");
+ <br>  Book2.book_id = 6495700;
+ 
+ <br>  /* print Book1 info by passing address of Book1 */
+   <br>printBook( &Book1 );
+
+ <br>  /* print Book2 info by passing address of Book2 */
+   <br>printBook( &Book2 );
+
+ <br>  return 0;
+<br>}
+
+<br>void printBook( struct Books *book ) {
+
+<br>   printf( "Book title : %s\n", book->title);
+   <br>printf( "Book author : %s\n", book->author);
+   <br>printf( "Book subject : %s\n", book->subject);
+   <br>printf( "Book book_id : %d\n", book->book_id);
+<br>}
+<br><hr>
+When the above code is compiled and executed, it produces the following result -
+<br>
+<br>Book title : C Programming
+<br>Book author : Nuha Ali
+<br>Book subject : C Programming Tutorial
+<br>Book book_id : 6495407
+<br>Book title : Telecom Billing
+<br>Book author : Zara Ali
+<br>Book subject : Telecom Billing Tutorial
+<br>Book book_id : 6495700
+</h2>
+</code>
+</div>

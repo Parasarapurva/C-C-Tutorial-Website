@@ -1,0 +1,143 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("9933333-ABC-series-Water-Liquid-Letter-Capital-C-Stock-Vector.jpg");
+height:100%;}
+</style>
+</head>
+
+<body>
+<h1 style="text-align:center;font-family:KingsrowThin">ARRAYS IN C</h1><hr color="black">
+<h2>
+   ** An array is a collection of data items, all of the same type, accessed using a common name.
+    <br><br>**A one-dimensional array is like a list;  A two dimensional array is like a table;  The C language places no limits on the number of dimensions in an array, though specific implementations may.
+    <br><br>**Some texts refer to one-dimensional arrays as vectors, two-dimensional arrays as matrices, and use the general term arrays when the number of dimensions is unspecified or unimportant.
+</h2>
+<h1 style="text-align:center;font-family:KingsrowThin">DECLARING ARRAYS:---</h1>
+<h2>
+
+    **Array variables are declared identically to variables of their data type, except that the variable name is followed by one pair of square [ ] brackets for each dimension of the array.
+    **Uninitialized arrays must have the dimensions of their rows, columns, etc. listed within the square brackets.
+    **Dimensions used when declaring arrays in C must be positive integral constants or constant expressions.
+        **In C99, dimensions must still be positive integers, but variables can be used, so long as the variable has a positive value at the time the array is declared. ( Space is allocated only once, at the time the array is declared. The array does NOT change sizes later if the variable used to declare it changes. )
+</h2><hr>
+<h1>    Examples:</h1>
+<div style="border:2px solid purple">
+<h1>Example 1:--</h1>
+<code>
+           <h2> int i, j, intArray[ 10 ], number;
+            <br>float floatArray[ 1000 ];
+            <br>int tableArray[ 3 ][ 5 ];      /* 3 rows by 5 columns */
+            <br>const int NROWS = 100;      // ( Old code would use #define NROWS 100 )
+           <br> const int NCOLS = 200;      // ( Old code would use #define NCOLS 200 )
+           <br> float matrix[ NROWS ][ NCOLS ];</h2>
+ <h1>  Example 2:---<h1>
+<h2>
+      int numElements;
+        <br>printf( "How big an array do you want? " );
+        <br>scanf( "%d", &numElements; )
+        <br>if( numElements <= 0 ) {
+            <br>printf( "Error - Quitting\n" );
+           <br> exit( 0 );
+        <br>}
+        <br>double data[ numElements ];    // This only works in C99, not in plain C  double data[ numElements ];    // This only works in C99, not in plain C
+</h2>
+</code>
+</div><hr>
+<h1 style="text-align:center">INITIALISING ARRAYS</h1>
+   <h2> Arrays may be initialized when they are declared, just as any other variables.
+<br>**    Place the initialization data in curly {} braces following the equals sign.  Note the use of commas in the examples below.
+    <br>**An array may be partially initialized, by providing fewer data items than the size of the array.  The remaining array elements will be automatically initialized to zero.
+    <br>**If an array is to be completely initialized, the dimension of the array is not required.  The compiler will automatically size the array to fit the initialized data.  ( Variation:  Multidimensional arrays - see below. )
+   <br> --->Examples:
+<br><code>
+           <br> int i =  5, intArray[ 6 ] = { 1, 2, 3, 4, 5, 6 }, k;
+            <br>float sum  = 0.0f, floatArray[ 100 ] = { 1.0f, 5.0f, 20.0f };
+            <br>double  piFractions[ ] = { 3.141592654, 1.570796327, 0.785398163 };
+</code>
+</h2>
+<h1>DESIGNATED INITIALISERS:---</H1><BR>
+<h2>     int numbers[ 100 ] = { 1, 2, 3, [10] = 10, 11, 12, [60] = 50, [42] = 420 }; 
+
+      <br>** In this example,the first three elements are initialized to 1, 2, and 3 respectively.
+        <br>**Then element 10 ( the 11th element ) is initialized to 10
+       <br>** The next two elements ( 12th and 13th ) are initialized to 11 and 12 respectively.
+        <br>**Element number 60 ( the 61st ) is initialized to 50, and number 42 ( the 43rd ) to 420.
+            ( Note that the designated initializers do not need to appear in order. )
+        <br>**As with traditional methods, all uninitialized values are set to zero.
+        <br>**If the size of the array is not given, then the largest initialized position determines the size of the array.
+<hr>
+<h1 style="text-align:center">One-dimensional Array</h1>
+<div style="border:2px solid purple"><h2>example:--</h2>
+<code><h2> /* Program to calculate the first 20 Fibonacci numbers. */
+        
+        <br>#include <stdlib.h>
+    <br>    #include <stdio.h> 
+
+        <br>int main( void ) {
+            
+            <br>int i, fibonacci[ 20 ];
+            
+           <br> fibonacci[ 0 ] = 0;
+           <br> fibonacci[ 1 ] = 1;
+            
+            <br>for( i = 2; i < 20; i++ )
+                <br>fibonacci[ i ] = fibonacci[ i - 2 ] + fibonacci[ i - 1 ];
+                
+            <br>for( i = 0; i < 20; i++ )
+        <br>        printf( "Fibonacci[ %d ] = %f\n", i, fibonacci[ i ] );
+            
+     <br>   } /* End of sample program to calculate Fibonacci numbers */  </h2></code>
+</div><hr>
+<h1 style="text-align:center">MULTIDIMENSIONAL ARRAYS</h1>
+<h2>
+    <br>**Multi-dimensional arrays are declared by providing more than one set of square [ ] brackets after the variable name in the declaration statement.
+    <br>**One dimensional arrays do not require the dimension to be given if the array is to be completely initialized.  By analogy, multi-dimensional arrays do not require the first dimension to be given if the array is to be completely initialized.  All dimensions after the first must be given in any case.
+    <br>**For two dimensional arrays, the first dimension is commonly considered to be the number of rows, and the second dimension the number of  columns.  We will use this convention when discussing two dimensional arrays.
+    <br>**Two dimensional arrays are considered by C/C++ to be an array of ( single dimensional arrays ).  For example, "int numbers[ 5 ][ 6 ]"  would refer to a single dimensional array of 5 elements, wherein each element is a single dimensional array of 6 integers.  By extension, "int numbers[ 12 ][ 5 ][ 6 ]" would refer to an array of twelve elements, each of which is a two dimensional array, and so on.
+    <br>**Another way of looking at this is that C stores two dimensional arrays by rows, with all elements of a row being stored together as a single unit.  Knowing this can sometimes lead to more efficient programs. 
+    <br>**Multidimensional arrays may be completely initialized by listing all data elements within a single pair of curly {} braces, as with single dimensional arrays.
+    <br>**It is better programming practice to enclose each row within a separate subset of curly {} braces, to make the program more readable.  This is required if any row other than the last is to be partially initialized.  When subsets of braces are used, the last item within braces is not followed by a comma, but the subsets are themselves separated by commas.
+    <br>**Multidimensional arrays may be partially initialized by not providing complete initialization data.  Individual rows of a multidimensional array may be partially initialized, provided that subset braces are used.
+    <br>**Individual data items in a multidimensional array are accessed by fully qualifying an array element.  Alternatively, a smaller dimensional array may be accessed by partially qualifying the array name.  For example, if  "data" has been declared as a three dimensional array of floats, then data[ 1 ][ 2 ][ 5 ] would refer to a float, data[ 1 ][ 2 ] would refer to a one-dimensional array of floats, and data[ 1 ] would refer to a two-dimensional array of floats.  The reasons for this and the incentive to do this relate to memory-management issues that are beyond the scope of these notes.
+</h2><hr>
+<div style="border:2px solid purple">
+<code>
+<h1>PROGRAM USING 2-D ARRAY</h1>
+<h2>
+ /* Sample program Using 2-D Arrays */
+        
+        <br>#include <stdlib.h>
+        <br>#include <stdio.h> 
+        
+        <br>int main( void <br>) {
+        
+           <br> /* Program to add two multidimensional arrays */
+            <br>/* Written May 1995 by George P. Burdell */
+            
+            <br>int a[ 2 ][ 3 ] = { { 5, 6, 7 }, { 10, 20, 30 } };
+            <br>int b[ 2 ][ 3 ] = { { 1, 2, 3 }, {  3,  2,  1 } };
+            <br>int sum[ 2 ][ 3 ], row, column;
+            
+            <br>/* First the addition */
+            
+            <br>for( row = 0; row < 2; row++ )
+                <br>for( column = 0; column < 3; column++ )
+                    <br>sum[ row ][ column ] =  
+            <br>            a[ row ][ column ] + b[ row ][ column ];
+            
+            <br>/* Then print the results */
+            
+            <br>printf( "The sum is: \n\n" );
+            
+            <br>for( row = 0; row < 2; row++ ) {
+               <br> for( column = 0; column < 3; column++ )
+                    <br>printf( "\t%d",  sum[ row ][ column ] );
+                <br>printf( '\n' );   /* at end of each row */
+            <br>}
+            
+        <br>    return 0;
+        <br>}
+</h2>
+</code>

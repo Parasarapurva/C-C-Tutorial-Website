@@ -1,0 +1,85 @@
+<html>
+<body bgcolor="lightpink">
+<h1><marquee>ASSIGNMENT OPERATORS IN C</marquee></h1>
+<hr>
+<h1>An assignment operator is used for assigning a value to a variable. The most common assignment operator is =</h1>
+<img src="computer-programming-lecture-17-to-19-9-638 - Copy.jpg "width="1300 ""height="400"">
+<hr>
+<table cellpadding="4" cellspacing="4" border='3' align="center" style="text-align:center; background-color:lightblue;border-collapse:collapse">
+<tr>
+<th><h2>OPERATORS</h2></th>
+<th><h2>EXAMPLE</h2></th>
+<th><h2>SAME AS</h2></th>
+</tr>
+<tr>
+<td><h2>=</h2></td>
+<td><h2>a=b</h2></td>
+<td><h2>a=b</h2></td>
+</tr>
+<tr>
+<td><h2>+=</h2></td>
+<td><h2>a+=b</h2></td>
+<td><h2>a=a+b</h2></td>
+</tr>
+<tr>
+<td><h2>-=</h2></td>
+<td><h2>a-=b</h2></td>
+<td><h2>a=a-b</h2></td>
+</tr>
+<tr>
+<td><h2>*=</h2></td>
+<td><h2>a*=b</h2></td>
+<td><h2>a=a*b</h2></td>
+</tr>
+<tr>
+<td><h2>/=</h2></td>
+<td><h2>a/=b</h2></td>
+<td><h2>a=a/b</h2></td>
+</tr>
+<tr>
+<td><h2>%=</h2></td>
+<td><h2>a%=b</h2></td>
+<td><h2>a=a%b</h2></td>
+</tr>
+</table>
+<hr>
+<h1>Example #1: Assignment Operators</h1>
+<div style="border:2px solid purple">
+<code>
+<h2>// C Program to demonstrate the working of assignment operators
+<br>#include <stdio.h><br>
+int main()<br>
+{<br>
+    int a = 5, c;<br>
+
+    c = a;<br>
+    printf("c = %d \n", c);<br>
+
+    c += a; // c = c+a<br>
+    printf("c = %d \n", c);<br>
+
+    c -= a; // c = c-a<br>
+    printf("c = %d \n", c);<br>
+
+    c *= a; // c = c*a<br>
+    printf("c = %d \n", c);<br>
+
+    c /= a; // c = c/a<br>
+    printf("c = %d \n", c);
+<br>
+    c %= a; // c = c%a<br>
+    printf("c = %d \n", c);
+
+    <br>return 0;
+<br>}</h2>
+<hr>
+<h1>Output:-</h1>
+<br><h2>
+c = 5 
+<br>c = 10 <br>
+c = 5 <br>
+c = 25 <br>
+c = 5 <br>
+c = 0<br>
+</h2>
+</code>

@@ -1,0 +1,164 @@
+<html>
+<body bgcolor="lightblue">
+<h1>Example: Prime Numbers Between Two Integers</h1><hr>
+<div style="border:2px solid black">
+<code>
+<h2>
+<br>#include <stdio.h>
+
+<br>int checkPrimeNumber(int n);
+<br>int main()
+<br>{
+   <br> int n1, n2, i, flag;
+
+    <br>printf("Enter two positive integers: ");
+    <br>scanf("%d %d", &n1, &n2);
+   <br> printf("Prime numbers between %d and %d are: ", n1, n2);
+
+    <br>for(i=n1+1; i<n2; ++i)
+    <br>{
+        <br>// i is a prime number, flag will be equal to 1
+     <br>   flag = checkPrimeNumber(i);
+
+        <br>if(flag == 1)
+            <br>printf("%d ",i);
+    <br>}
+    <br>return 0;
+<br>}
+
+<br>// user-defined function to check prime number
+<br>int checkPrimeNumber(int n)
+<br>{
+   <br> int j, flag = 1;
+
+    <br>for(j=2; j <= n/2; ++j)
+    <br>{
+        <br>if (n%j == 0)
+        <br>{
+            <br>flag =0;
+            <br>break;
+        <br>}
+    <br>}
+<br>    return flag;
+<br>}
+</h2>
+</code>
+</div>
+<hr>
+<h1>Example: Program to calculate power using recursion</h1><hr>
+<div style="border:2px solid black">
+<code>
+<h2>
+<br>#include <stdio.h>
+
+<br>int power(int n1, int n2);
+
+<br>int main()
+<br>{
+   <br> int base, powerRaised, result;
+
+    <br>printf("Enter base number: ");
+    <br>scanf("%d",&base);
+
+    <br>printf("Enter power number(positive integer): ");
+    <br>scanf("%d",&powerRaised);
+
+    <br>result = power(base, powerRaised);
+
+   <br> printf("%d^%d = %d", base, powerRaised, result);
+    <br>return 0;
+<br>}
+
+<br>int power(int base, int powerRaised)
+<br>{
+  <br>  if (powerRaised != 1)
+        <br>return (base*power(base, powerRaised-1));
+    <br>else
+        <br>return 1;
+<br>}
+</h2>
+</code>
+</div>
+<h1>C Program to Check Prime or Armstrong Number Using User-defined Function
+</h1><hr>
+<div style="border:2px solid black">
+<code>
+<h2>
+<br>#include <stdio.h>
+<br>#include <math.h>
+
+<br>int checkPrimeNumber(int n);
+<br>int checkArmstrongNumber(int n);
+
+<br>int main()
+<br>{
+    <br>int n, flag;
+
+    <br>printf("Enter a positive integer: ");
+    <br>scanf("%d", &n);
+
+    <br>// Check prime number
+    <br>flag = checkPrimeNumber(n);
+    <br>if (flag == 1)
+       <br> printf("%d is a prime number.\n", n);
+    <br>else
+     <br>   printf("%d is not a prime number.\n", n);
+
+    <br>// Check Armstrong number
+    <br>flag = checkArmstrongNumber(n);
+    <br>if (flag == 1)
+        <br>printf("%d is an Armstrong number.", n);
+    <br>else
+        <br>printf("%d is not an Armstrong number.",n);
+    <br>return 0;
+<br>}
+
+<br>int checkPrimeNumber(int n)
+<br>{
+   <br> int i, flag = 1;
+
+    <br>for(i=2; i<=n/2; ++i)
+  <br>  {
+
+    <br>// condition for non-prime number
+        <br>if(n%i == 0)
+        <br>{
+            <br>flag = 0;
+            <br>break;
+        <br>}
+    <br>}
+    <br>return flag;
+<br>}
+
+<br>int checkArmstrongNumber(int number)
+<br>{
+  <br>  int originalNumber, remainder, result = 0, n = 0, flag;
+
+  <br>  originalNumber = number;
+
+    <br>while (originalNumber != 0)
+    <br>{
+      <br>  originalNumber /= 10;
+        <br>++n;
+  <br>  }
+
+<br>    originalNumber = number;
+
+    <br>while (originalNumber != 0)
+    <br>{
+        <br>remainder = originalNumber%10;
+        <br>result += pow(remainder, n);
+        <br>originalNumber /= 10;
+   <br> }
+<br>
+    <br>// condition for Armstrong number
+    <br>if(result == number)
+        <br>flag = 1;
+    <br>else
+<br>        flag = 0;
+
+ <br>   return flag;
+<br>}
+</h2>
+</code>
+</div>

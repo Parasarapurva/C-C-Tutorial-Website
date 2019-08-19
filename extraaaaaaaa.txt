@@ -1,0 +1,90 @@
+.headk{
+
+BACKGROUND-IMAGE:URL("BAB.jpg");
+COLOR:RED;
+font-size:10px;
+padding:10px;}
+
+th, td {
+    padding: 15px;
+}
+
+.links{
+float:left;
+padding:40px;
+width:400px;
+}
+
+.image{
+margin-left:400px;
+padding:20px;
+border-left:2px solid gold;
+}
+
+.footer{
+background-color:blue;
+color:red;
+font-size:15px;
+padding:15px;}
+
+
+body{
+	margin:0px;
+	padding: 0px;
+	width:100%;
+	height:100%;
+	
+}
+
+h1{
+	
+	color: white;
+	font-weight: bold;
+	font-size: 45px;
+}
+
+
+.done{
+	color:blue;
+	
+	background-color:gold;
+}
+.ho
+{
+	
+	COLOR:#00008B;
+	BACKGROUND-IMAGE:URL("BAB.jpg");
+    
+}
+
+
+.Lo
+{
+
+	COLOR:#00008B;
+	BACKGROUND-COLOR: #00FF7F ;
+}
+
+.Po
+{
+
+	COLOR:#00008B;
+	BACKGROUND-COLOR: #00BFFF ;
+}
+.Fp
+{
+	COLOR:#006400;
+	BACKGROUND-COLOR:#FF8C00;
+}
+.pan
+{
+	COLOR:RED;
+	BACKGROUND-IMAGE:URL("BAB.jpg");
+	background-blend-mode: lighten;
+}
+
+#LP
+{
+	COLOR:RED;
+}
+

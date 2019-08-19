@@ -1,0 +1,150 @@
+<html>
+<body bgcolor="lightpink">
+<h1>EXAMPLE : 1 ---> Program to check uppercase or lowercase alphabets
+</h1><hr>
+<div style="border:2px solid black">
+<code>
+<h2>
+<br>/**
+ * C program to check whether a character is uppercase or lowercase 
+ */<br><br>
+ 
+<br>#include <stdio.h>
+ 
+<br>int main()
+<br>{
+   <br> char ch;
+ 
+    <br>/* Read character from user */
+    <br>printf("Enter any character: ");
+   <br> scanf("%c", &ch);
+ 
+ 
+    <br>if(ch >= 'A' && ch <= 'Z')
+    <br>{
+        <br>printf("%c is uppercase alphabet.", ch);
+    <br>}
+    <br>else if(ch >= 'a' && ch <= 'z')
+    <br>{
+        <br>printf("%c is lowercase alphabet.", ch);
+    <br>}
+    <br>else
+    <br>{
+        <br>printf("%c is not an alphabet.", ch);
+ <br>   }
+ 
+<br>    return 0;
+<br>} 
+</h2>
+</code>
+</div><hr>
+<h1>EXAMPLE : 2 ---> Program to find roots...
+</h1><hr>
+<div style="border:2px solid black">
+<code>
+<h2>
+<br>/**
+ * C program to find all roots of a quadratic equation
+ */
+ 
+<br>#include <stdio.h>
+<br>#include <math.h> //Used for sqrt()
+ 
+<br>int main()
+<br>{
+    <br>float a, b, c;
+    <br>float root1, root2, imaginary;
+    <br>float discriminant;
+     
+    <br>printf("Enter values of a, b, c of quadratic equation (aX^2 + bX + c): ");
+   <br> scanf("%f%f%f", &a, &b, &c);
+     
+    <br>discriminant = (b*b) - (4*a*c);
+     
+     
+    <br>/* Find the nature of discriminant */
+    <br>if(discriminant > 0)
+    <br>{
+        <br>root1 = (-b + sqrt(discriminant)) / (2*a);
+        <br>root2 = (-b - sqrt(discriminant)) / (2*a);
+ 
+       <br> printf("Two distinct and real roots exists: %.2f and %.2f", root1, root2);
+    <br>}
+    <br>else if(discriminant == 0)
+    <br>{
+        <br>root1 = root2 = -b / (2*a);
+ 
+      <br>  printf("Two equal and real roots exists: %.2f and %.2f", root1, root2);
+    <br>}
+    <br>else if(discriminant < 0)
+    <br>{
+        <br>root1 = root2 = -b / (2*a);
+        <br>imaginary = sqrt(-discriminant) / (2*a);
+ 
+      <br>  printf("Two distinct complex roots exists: %.2f + i%.2f and %.2f - i%.2f", 
+                <br>root1, imaginary, root2, imaginary);
+    <br>}
+ 
+   <br> return 0;
+
+</h2>
+</code>
+</div>
+<hr>
+<h1>EXAMPLE 3: FINDING GRADES???</h1><hr>
+<div style="border:2px solid black">
+<code>
+<h2>
+<br>/**
+ * C program to enter marks of five subjects and find percentage and grade
+ */
+ 
+<br>#include <stdio.h>
+ 
+<br>int main()
+<br>{
+   <br> int phy, chem, bio, math, comp; //Five subjects
+   <br> float per; 
+ 
+    <br>/* Reads marks of five subjects from user */
+    <br>printf("Enter five subjects marks: ");
+   <br> scanf("%d%d%d%d%d", &phy, &chem, &bio, &math, &comp);
+ 
+ 
+    <br>/* Calculates percentage */
+  <br>  per = (phy + chem + bio + math + comp) / 5.0;
+ 
+ <br>   printf("Percentage = %.2f\n", per);
+ 
+ 
+    <br>/* Finds grade according to the percentage */
+    <br>if(per >= 90)
+    <br>{
+        <br>printf("Grade A");
+    <br>}
+    <br>else if(per >= 80)
+    <br>{
+        <br>printf("Grade B");
+    <br>}
+    <br>else if(per >= 70)
+    <br>{
+        <br>printf("Grade C");
+    <br>}
+    <br>else if(per >= 60)
+    <br>{
+        <br>printf("Grade D");
+    <br>}
+    <br>else if(per >= 40)
+    <br>{
+        <br>printf("Grade E");
+    }<br>
+    else<br>
+    {
+        <br>printf("Grade F");
+    <br>}
+ <br>
+    return 0;
+<br>}
+</h2>
+</code>
+</div>

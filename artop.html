@@ -1,0 +1,63 @@
+<html>
+<body bgcolor="gray">
+<h1 style="text-align:center; font-family:Juniper"><marquee>C Arithmetic Operators</marquee></h1>
+<hr><br>
+<h1 >An arithmetic operator performs mathematical operations such as addition, subtraction and multiplication on numerical values (constants and variables).</h1>
+<table cellpadding="4" cellspacing="4" border='3' align="center" style="text-align:center; background-color:lightgreen;border-collapse:collapse">
+<hr><tr><th><h2>OPERATOR<h2></th><th><h2>MEANING OF OPERATOR</h2><th></tr>
+<tr><h2 style="font-family:Goudy Stout"><td>+</h2></td><td><h2>addition or unary plus</td></h2></tr>
+<tr><h2 style="font-family:Goudy Stout"><td>-</h2></td><td><h2>subtraction or unary minus</td></h2></tr>
+<tr><h2 style="font-family:Goudy Stout"><td>*</h2></td><td><h2>multliplication</td></h2></tr>
+<tr><h2 style="font-family:Goudy Stout"><td>/</h2></td><td><h2>division</td></h2></tr>
+<tr><h2 style="font-family:Goudy Stout"><td>%</h2></td><td><h2>remainder after division( modulo division)</td></h2></tr>
+</table>
+<h1>ARITHMETIC OPERATORS : EXAMPLE 1</h2>
+<br>
+<div style="border:4px solid black; padding-left:8px"><h3 style="color:purple;font-family:KingsrowThin"><br>// C Program to demonstrate the working of arithmetic operators
+<br> <code>#include <stdio.h>
+<br>int main()
+<br>{
+    <br>int a = 9,b = 4, c;
+    <br>
+    c = a+b;
+    <br>printf("a+b = %d \n",c);
+<br>
+    c = a-b;
+   <br> printf("a-b = %d \n",c);
+    
+    <br>c = a*b;
+   <br> printf("a*b = %d \n",c);
+    <br>
+    c=a/b;
+    <br>printf("a/b = %d \n",c);
+    <br>
+    c=a%b;
+    <br>printf("Remainder when a divided by b = %d \n",c);
+    
+    <br>return 0;
+<br>}<br><h3>
+</code>
+<hr></div>
+<h1>output:-</h1>
+<div style="border:4px solid black; padding-left:8px"><h2 style="color:black;font-family:KingsrowThin"><br>
+ a+b -: 13
+<br>a-b -: 5
+<br>a*b -: 36
+<br>a/b -: 2
+<br>Remainder when a divided by b=1.
+</div>
+<h1>The operators +, - and * computes addition, subtraction and multiplication respectively as you might have expected.
+
+In normal calculation, 9/4 = 2.25. However, the output is 2 in the program.
+
+It is because both variables a and b are integers. Hence, the output is also an integer. The compiler neglects the term after decimal point and shows answer 2 instead of 2.25.
+
+The modulo operator % computes the remainder. When a = 9 is divided by b = 4, the remainder is 1. The % operator can only be used with integers.</h1>
+<DIV STYLE="BORDER:4PX SOLID BLACK"><H2 STYLE="COLOR:BLACK;FONT-FAMILY:BOLD"><BR>
+<H2>Suppose a = 5.0, b = 2.0, c = 5 and d = 2. Then in C programming,
+<BR>
+a/b = 2.5  // Because both operands are floating-point variables<BR>
+a/d = 2.5  // Because one operand is floating-point variable<BR>
+c/b = 2.5  // Because one operand is floating-point variable<BR>
+c/d = 2     // Because both operands are integers</H2><BR>
+</DIV>

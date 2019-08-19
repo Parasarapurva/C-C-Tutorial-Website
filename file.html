@@ -1,0 +1,202 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("9933333-ABC-series-Water-Liquid-Letter-Capital-C-Stock-Vector.jpg");
+height:100%;}
+</style>
+</head>
+
+<body>
+<h1 style="text-align:center;font-family:Juniper">FILE HANDLING IN C</h1><hr color="black">
+<h2>
+ A file represents a sequence of bytes on the disk where a group of related data is stored. File is created for permanent storage of data. It is a ready made structure.
+<br><br>
+In C language, we use a structure pointer of file type to declare a file.
+<br><i>FILE *fp;<br><br></i>C provides a number of functions that helps to perform basic file operations. Following are the functions,<br></h2>
+<table cellpadding="4" cellspacing="4" border='3' align="center" style="text-align:center; background-color:lightblue;border-collapse:collapse">
+<tr>
+<th><h2><i>FUNCTIONS</i></h2></th>
+<th><h2><i>DESCRIPTIONS</i></h2></th>
+</tr>
+<tr>
+<td><h2>fopen()</h2></td>
+<td><h2>creates  a new file.</h2></td>
+</tr>
+<tr>
+<td><h2>fclose()</h2></td>
+<td><h2>closes a file.</h2></td>
+</tr>
+<tr>
+<td><h2>getc()</h2></td>
+<td><h2>reads a character from a file.</h2></td>
+</tr>
+<tr>
+<td><h2>putc()</h2></td>
+<td><h2>writes a character from a file</h2></td>
+</tr>
+<tr>
+<td><h2>fscanf()</h2></td>
+<td><h2>read a set of data from a file.</h2></td>
+</tr>
+<tr>
+<td><h2>fprintf()</h2></td>
+<td><h2>writes a set of data to a file</h2></td>
+</tr>
+<tr>
+<td><h2>getw()</h2></td>
+<td><h2>reads a integer from a file.</h2></td>
+</tr>
+<tr>
+<td><h2>putw()</h2></td>
+<td><h2>writes a integer to a file.</h2></td>
+</tr>
+<tr>
+<td><h2>fseek()</h2></td>
+<td><h2>set the position to desire point.</h2></td>
+</tr>
+<tr>
+<td><h2>ftell()</h2></td>
+<td><h2>gives current position in the file.</h2></td>
+</tr>
+<tr>
+<td><h2>rewind()</h2></td>
+<td><h2>set the position to the begining point.</h2></td>
+</tr>
+<hr>
+</table>
+<h1 style="text-align:center">OPENING A FILE OR CREATING A FILE</h1><hr>
+<h2>The fopen() function is used to create a new file or to open an existing file
+<br><br>
+SYNTAX:
+<br>
+<i>*fp = FILE *fopen(const char *filename, const char *mode);</i>
+<br><br>
+Here filename is the name of the file to be opened and mode specifies the purpose of opening the file. Mode can be of following types,
+<br>
+<i>*fp</i> is the FILE pointer (FILE *fp), which will hold the reference to the opened(or created) file.
+</h2>
+<table cellpadding="4" cellspacing="4" border='3' align="center" style="text-align:center; background-color:lightblue;border-collapse:collapse">
+<tr>
+<th><h2><i>MODES</i></h2></th>
+<th><h2><i>DESCRIPTIONS</i></h2></th>
+</tr><tr>
+<td><h2><i>r</i></h2></td>
+<td><h2><i>opens a text file</i></h2></td>
+</tr>
+
+<tr>
+<td><h2><i>w</i></h2></td>
+<td><h2><i>opens or creates a text file</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>a</i></h2></td>
+<td><h2><i>opens a tex file in append mode</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>r+</i></h2></td>
+<td><h2><i>opens a text file in both reading and writing mode</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>w+</i></h2></td>
+<td><h2><i>opens a text file in both reading and writing mode</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>a+</i></h2></td>
+<td><h2><i>opens a text file in both reading and writing mode</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>rb</i></h2></td>
+<td><h2><i>opens a binary file</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>wb</i></h2></td>
+<td><h2><i>opens or create a binary file</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>ab</i></h2></td>
+<td><h2><i>opens a binary file in append mode</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>rb+</i></h2></td>
+<td><h2><i>opens a binary file in both reading and writing modev</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>wb+</i></h2></td>
+<td><h2><i>opens a binary file in both reading and writing mode</i></h2></td>
+</tr>
+<tr>
+<td><h2><i>ab+</i></h2></td>
+<td><h2><i>opens a binary file in both reading and writing mode</i></h2></td>
+</tr>
+</table>
+<hr>
+<h1>CLOSING A FILE :---</h1>
+<h2> The fclose() function is used to close an already opened file.
+
+General Syntax :
+<br>
+<i>int fclose( FILE *fp );<i>
+<br>
+Here fclose() function closes the file and returns zero on success, or EOF if there is an error in closing the file. This EOF is a constant defined in the header file <i>stdio.h<i>.
+</h2>
+<hr><h1 style="text-align:center">I/P & O/P OPERATION ON A FILE</h1>
+<div style="border:2px solid purple"><h2>
+In the above table we have discussed about various file I/O functions to perform reading and writing on file. getc() and putc() are simplest functions used to read and write individual characters to a file. 
+<hr>
+<code>
+<h2>
+<br>#include<stdio.h>
+<br>#include<conio.h>
+<br>main()
+<br>{
+ <br>FILE *fp;
+ <br>char ch;
+ <br>fp = fopen("one.txt", "w");
+ <br>printf("Enter data");
+ <br>while( (ch = getchar()) != EOF) {
+    <br>putc(ch,fp);
+ <br>}
+ <br>fclose(fp);
+ <br>fp = fopen("one.txt", "r");
+ 
+ <br>while( (ch = getc(fp)! = EOF)
+    <br>printf("%c",ch);
+    
+<br> fclose(fp);
+<br>}
+</h2>
+</code>
+</div>
+<h1>EXAMPLE OF READING & WRITING</h1>
+<div style="border:2px solid purple">
+<code>
+<h2>
+<br>#include<stdio.h>
+<br>#include<conio.h>
+<br>struct emp
+<br>{
+   <br>char name[10];
+   <br>int age;
+<br>};
+
+<br>void main()
+<br>{
+   <br>struct emp e;
+   <br>FILE *p,*q;
+   <br>p = fopen("one.txt", "a");
+   <br>q = fopen("one.txt", "r");
+   <br>printf("Enter Name and Age");
+   <br>scanf("%s %d", e.name, &e.age);
+   <br>fprintf(p,"%s %d", e.name, e.age);
+   <br>fclose(p);
+  <br> do
+   <br>{
+      <br>fscanf(q,"%s %d", e.name, e.age);
+      <br>printf("%s %d", e.name, e.age);
+   <br>}
+  <br> while( !feof(q) );
+<br>   getch();
+<br>}
+</h2>
+</code>

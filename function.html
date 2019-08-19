@@ -1,0 +1,116 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("9933333-ABC-series-Water-Liquid-Letter-Capital-C-Stock-Vector.jpg");
+height:100%;}
+</style>
+</head>
+
+<body bgcolor="lightblue">
+<h1 style="font-family:Kastellar Wd;text-align:center">FUNCTIONS IN C</h1>
+<hr>
+<h2 style="">A function is a group of statements that together perform a task. Every C program has at least one function, which is main(), and all the most trivial programs can define additional functions.
+
+You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division is such that each function performs a specific task.
+
+A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function.
+
+The C standard library provides numerous built-in functions that your program can call. For example, strcat() to concatenate two strings, memcpy() to copy one memory location to another location, and many more functions.
+<IMG SRC="function-c-programming.jpg"width="1000 ""height="400"">
+A function can also be referred as a method or a sub-routine or a procedure, etc.</h2>
+<h1 style="font-family:Goudy Stout">DEFINING A FUNCTION:-<hr></h1>
+<h2>The general form of a function definition in C programming language is as follows -:</h2>
+<div style="border:3px solid purple">return_type function_name( parameter list )<br> {
+   body of the function
+}</div>
+<h2>A function definition in C programming consists of a function header and a function body. Here are all the parts of a function -:
+<br><br>
+<br>
+<br>    Return Type - A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword void.
+<br>
+<br>    Function Name - This is the actual name of the function. The function name and the parameter list together constitute the function signature.
+<br>
+<br>    Parameters - A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.
+<br>
+<br>    Function Body - The function body contains a collection of statements that define what the function does.
+</h2>
+<h1>EXAMPLE<H1>
+<DIV STYLE="BORDER:3PX SOLID PURPLE">
+/* function returning the max between two numbers */
+<BR>int max(int num1, int num2) {
+<BR>
+   /* local variable declaration */
+  <BR> int result;
+ <BR>  if (num1 > num2)
+      <BR>result = num1;
+   <BR>else
+ <BR>     result = num2;
+ 
+<BR>   return result; 
+<BR>}
+</DIV>
+<H1>FUNCTION  DECLARATIONS<H2>
+<HR>
+<H2>A function declaration tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.
+
+A function declaration has the following parts -<BR><BR>
+<DIV STYLE="BORDER:3PX SOLID PURPLE">
+return_type function_name( parameter list );
+</DIV>
+<H2>For the above defined function max(), the function declaration is as follows -<BR><BR></H2>
+<DIV STYLE="BORDER:3PX SOLID PURPLE">
+int max(int num1, int num2);
+</DIV>
+<H2>Parameter names are not important in function declaration only their type is required, so the following is also a valid declaration -<BR><BR></H2>
+<DIV STYLE="BORDER:3PX SOLID PURPLE">
+int max(int, int);
+</DIV>
+<H2>Function declaration is required when you define a function in one source file and you call that function in another file. In such case, you should declare the function at the top of the file calling the function.</H2>
+<H1>CALLING A FUNCTION:-</H1><HR><BR>
+<H2>While creating a C function, you give a definition of what the function has to do. To use a function, you will have to call that function to perform the defined task.
+<BR><BR>
+When a program calls a function, the program control is transferred to the called function. A called function performs a defined task and when its return statement is executed or when its function-ending closing brace is reached, it returns the program control back to the main program.
+<BR><BR>
+To call a function, you simply need to pass the required parameters along with the function name, and if the function returns a value, then you can store the returned value. For example -</H2>
+<DIV STYLE="BORDER:3PX SOLID PURPLE">
+<h2><CODE>
+<BR>#include <stdio.h>
+ 
+<BR>/* function declaration */
+<BR>int max(int num1, int num2);
+ 
+<BR>int main ()<BR> {
+
+  <BR> /* local variable definition */
+  <BR> int a = 100;
+   <BR>int b = 200;
+ <BR>  int ret;
+ 
+   <BR>/* calling a function to get max value */
+ <BR>  ret = max(a, b);
+ 
+ <BR>  printf( "Max value is : %d\n", ret );
+ 
+<BR>   return 0;
+<BR>}
+ 
+<BR>/* function returning the max between two numbers */
+<BR>int max(int num1, int num2) {
+
+<BR>   /* local variable declaration */
+ <BR>  int result;
+ 
+  <BR> if (num1 > num2)
+      <BR>result = num1;
+  <BR> else
+ <BR>     result = num2;
+ 
+<BR>   return result; 
+<BR>}</h2>
+</CODE>
+</DIV>
+<H2>We have kept max() along with main() and compiled the source code. While running the final executable, it would produce the following result -<BR></H2>
+<DIV STYLE="BORDER:3PX SOLID PURPLE">
+Max value is : 200
+</DIV>

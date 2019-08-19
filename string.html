@@ -1,0 +1,113 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("9933333-ABC-series-Water-Liquid-Letter-Capital-C-Stock-Vector.jpg");
+height:100%;}
+</style>
+</head>
+
+<head>
+<style>
+body{
+background-image:url("9933333-ABC-series-Water-Liquid-Letter-Capital-C-Stock-Vector.jpg");
+height:100%;}
+</style>
+</head>
+
+<body bgcolor="grey">
+<h1 style="font-family:Harrington;text-align:center;font-size:40">STRINGS IN C</h2><hr>
+<h2>Strings are actually one-dimensional array of characters terminated by a null character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.
+The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."</h2>
+<div style="border:3px solid black"><h2>char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'}</h2></div>
+<h2>Following is the memory presentation of the above defined string in C/C++ -</h2>
+<IMG SRC="string_representation.jpg"width="1000 ""height="400"">
+<h2>Actually, you do not place the null character at the end of a string constant. The C compiler automatically places the '\0' at the end of the string when it initializes the array. Let us try to print the above mentioned string -</h2>
+<div style="border:3px solid black"><code><h2>#include <stdio.h>
+
+<br>int main ()<br> {
+
+<br>   char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+  <br> printf("Greeting message: %s\n", greeting );
+   <br>return 0;
+<br>}</h2></code></div>
+<hr><h1 style="text-align:center">SOME STRING  FUNCTIONs USED:-</h2>
+<table cellpadding="4" cellspacing="4" border='3' align="center" style="text-align:center; background-color:lightblue;border-collapse:collapse">
+<tr>
+<th><h2>S.NO.</h2></th>
+<th><h2>FUNCTION & PURPOSE</h2></th>
+</tr>
+<tr>
+<td><h2>1.</h2></td>
+<td><h2>strcpy(s1, s2);<br>
+
+Copies string s2 into string s1.</h2></td>
+</tr>
+<tr>
+<td><h2>2.</h2></td>
+<td><h2>strcat(s1, s2);
+<br>
+Concatenates string s2 onto the end of string s1.</h2></td>
+</tr>
+<tr>
+<td><h2>3.</h2></td>
+<td><h2>strlen(s1);
+<br>
+Returns the length of string s1.</h2></td>
+</tr>
+<tr>
+<td><h2>4.</h2></td>
+<td><h2>strcmp(s1, s2);
+<br>
+Returns 0 if s1 and s2 are the same; less than 0 if s1<s2; greater than 0 if s1>s2.</h2></td>
+</tr>
+<tr>
+<td><h2>5.</h2></td>
+<td><h2>strchr(s1, ch);
+<br>
+Returns a pointer to the first occurrence of character ch in string s1.</h2></td>
+</tr>
+<tr>
+<td><h2>6.</h2></td>
+<td><h2>strstr(s1, s2);
+<br>
+Returns a pointer to the first occurrence of string s2 in string s1.</h2></td>
+</tr>
+</table>
+<hr>
+<h2>EXAMPLE OF STRINGS:---</h2>
+<div style="border:3px solid black">
+<code>
+<h2>#include <stdio.h>
+<br>#include <string.h>
+<br>
+<br>int main ()<br> {
+
+   <br>char str1[12] = "Hello";
+  <br> char str2[12] = "World";
+  <br> char str3[12];
+<br>   int  len ;
+
+  <br> /* copy str1 into str3 */
+  <br> strcpy(str3, str1);
+<br>   printf("strcpy( str3, str1) :  %s\n", str3 );
+
+   <br>/* concatenates str1 and str2 */
+   <br>strcat( str1, str2);
+<br>   printf("strcat( str1, str2):   %s\n", str1 );
+
+  <br> /* total lenghth of str1 after concatenation */
+  <br> len = strlen(str1);
+<br>   printf("strlen(str1) :  %d\n", len );
+
+  <br> return 0;</h2>
+<br>}
+</code>
+<h2>When the above code is compiled and excecuted,
+it producesthe following result:---</h2>
+<code>
+<h2>strcpy( str3, str1) :  Hello
+<br>strcat( str1, str2):   HelloWorld
+<br>strlen(str1) :  10</h2>
+</code>
+</div>

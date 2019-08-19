@@ -1,0 +1,124 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("9933333-ABC-series-Water-Liquid-Letter-Capital-C-Stock-Vector.jpg");
+height:100%;}
+</style>
+</head>
+
+<body bgcolor="lightblue">
+<head>
+
+<h1 style="text-align:center;font-family:Jokerman;color:red">DATA TYPES</h1>
+<h1 style="font-family:Harlow Solid;color:red">Data types in C refer to an extensive system used for declaring variables or functions of different types. The type of a variable determines how much space it occupies in storage and how the bit pattern stored is interpreted. <br>The types in C can be classified as follows:<br> </h1>
+</head>
+</body>
+
+<body>
+<table cellpadding="4" cellspacing="4" border='3' align="center" style="text-align:center; background-color:lightblue;border-collapse:collapse">
+<tr>
+<hr><th><h2>S.N.<h2></th>
+<th><h2>TYPES & DESCRIPTION</h2><th>
+</tr>
+<tr>
+<td>
+<h3>1.</h3>
+</td>
+<td><h3>Basic Types:<br> They are arithmetic types and are further classified into: (a) integer types and <br>(b) floating-point types. 
+</h3></td>
+</tr>
+<tr>
+<td><h3>2.<h3></td>
+<td><h3>Enumerated types:<br> They are again arithmetic types and they are used to define variables that can only assign certain discrete integer values throughout the program.<h3></td>
+</tr>
+<tr>
+<td><h3>3.</h3>
+</td>
+<td><h3>The type void: <br>The type specifier void indicates that no value is available. </h3></td>
+</tr>
+</tr>
+<tr>
+<td><h3>4.</h3>
+</td>
+<td><h3>Derived types: <br>They include:-<br> (a) Pointer types<br> (b) Array types<br> (c) Structure types<br> (d) Union types<br> (e) Function types<br> </h3></td>
+</tr>
+</table>
+<body>
+<h1 text-align="center">INTEGER TYPES</h1><hr>
+<h2 style="font-family:jokerman">The following table provides the details of standard integer types with their storage sizes and value ranges: <br></h2>
+</body>
+<table cellpadding="4" cellspacing="4" border='3' align="center" style="text-align:center; background-color:lightblue;border-collapse:collapse">
+<tr><h1>
+<th>TYPE</th>
+<th>STORAGE SIZE</th>
+<th>VALUE RANGE</th>
+</tr>
+<tr>
+<h2><td>Char</td>
+<td>1 byte </td>
+<td>-128 to 127 or 0 to 255 </td><h2>
+</h2></tr>
+<tr>
+<h2><td>Unsigned char</td>
+<td>1 byte </td>
+<td>0 to 255</td>
+</h2></tr>
+<tr>
+<h2><td>Signed char</td>
+<td>1 byte </td>
+<td>-128 to 127 </td>
+</h2>
+</tr>
+<tr>
+<h2><td>Int</td>
+<td>2 or 4 bytes </td>
+<td>-32,768 to 32,767 or -2,147,483,648 to 2,147,483,647 </td>
+</h2>
+</tr>
+<tr>
+<h2><td>Unsigned int</td>
+<td>2 or 4 bytes </td>
+<td>0 to 65,535 or 0 to 4,294,967,295 </td>
+</h2>
+</tr>
+<tr>
+<h2><td>Short</td>
+<td>2 bytes</td>
+<td>-32,768 to 32,767</td>
+
+</tr>
+<tr><h2>
+<td>Unsigned Short</td>
+<td>2 bytes</td>
+<td>0 to 65,535</td>
+
+</tr>
+<tr>
+<h2><td>Long</td>
+<td>4 bytes</td>
+<td>-2,147,483,648 to 2,147,483,647</td>
+
+</tr>
+<tr><h2>
+<td>Unsigned long</td>
+<td>4 bytes</td>
+<td>0 to 4,294,967,295</td>
+
+</tr>
+</table>
+</body><hr>
+<body><h2 style="font-family:jokerman">
+To get the exact size of a type or a variable on a particular platform, you can use the sizeof operator. The expressions sizeof(type) yields the storage size of the object or type in bytes. Given below is an example to get the size of int type on any machine: 
+<br>
+<code><div style="border:2px solid gray">
+#include <stdio.h> <br>
+#include <limits.h> <br>
+int main() <br>
+{<br> 
+   printf("Storage size for int : %d \n", sizeof(int)); 
+ <br>
+ <br>  return 0; 
+<br>}
+</code></div></h2></body>
+</html>

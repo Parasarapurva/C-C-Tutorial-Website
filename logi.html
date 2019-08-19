@@ -1,0 +1,72 @@
+<html>
+<body>
+<h1 style="text-align:center">LOGICAL OPERATORS</h1>
+<hr>
+<h2><i>
+An expression containing logical operator returns either 0 or 1 depending upon whether expression results true or false. Logical operators are commonly used in decision making in C programming.</i>
+</h2>
+<table cellpadding="4" cellspacing="4" border='3' align="center" style="text-align:center; background-color:lightblue;border-collapse:collapse">
+<tr>
+<th><h2><i>OPERATORS</i></h2></th>
+<th><h2><i>MEANING OF OPERATORS</i></h2></th>
+<th><h2><i>EXAMPLE</h2></i></th>
+<tr>
+<td><h2>&&</h2></td>
+<td><h2>Logial AND. True only if all operands are true</h2></td>
+<td><h2>If c = 5 and d = 2 then, expression ((c == 5) && (d > 5)) equals to 0.</h2></td>
+</tr>
+<tr>
+<td><h2>||</h2></td>
+<td><h2>Logical OR. True only if either one operand is true</h2></td>
+<td><h2>If c = 5 and d = 2 then, expression ((c == 5) || (d > 5)) equals to 1.</h2></td>
+</tr>
+<tr>
+<td><h2>!</h2></td>
+<td><h2>Logical NOT. True only if the operand is 0</h2></td>
+<td><h2>If c = 5 then, expression ! (c == 5) equals to 0.</h2></td>
+</tr>
+</table>
+<hr>
+<h1>EXAMPLE #1 </h1>
+<div style="border:2px solid black">
+<code>
+<h2>
+<br>// C Program to demonstrate the working of logical operators
+
+<br>#include <stdio.h>
+<br>int main()
+<br>{
+   <br> int a = 5, b = 5, c = 10, result;
+
+    <br>result = (a = b) && (c > b);
+  <br>  printf("(a = b) && (c > b) equals to %d \n", result);
+
+    <br>result = (a = b) && (c < b);
+   <br> printf("(a = b) && (c < b) equals to %d \n", result);
+
+   <br> result = (a = b) || (c < b);
+   <br> printf("(a = b) || (c < b) equals to %d \n", result);
+
+    <br>result = (a != b) || (c < b);
+    <br>printf("(a != b) || (c < b) equals to %d \n", result);
+
+    <br>result = !(a != b);
+ <br>   printf("!(a == b) equals to %d \n", result);
+
+   <br> result = !(a == b);
+<br>    printf("!(a == b) equals to %d \n", result);
+
+    <br>return 0;
+<br>}
+</h2>
+<h1>Output<h1>
+<h2>
+<br>
+<br>(a = b) && (c > b) equals to 1 
+<br>(a = b) && (c < b) equals to 0 
+<br>(a = b) || (c < b) equals to 1 
+<br>(a != b) || (c < b) equals to 0 
+<br>!(a != b) equals to 1 
+<br>!(a == b) equals to 0 
+<br></h2>
+</code>

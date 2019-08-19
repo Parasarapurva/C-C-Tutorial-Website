@@ -1,0 +1,96 @@
+<html>
+<body bgcolor="grey">
+<h1 style="font-family:bold;text-align:center">RELATIONAL OPERATORS IN C</h1><hr>
+<h2 style:"font-family:Impact">A relational operator checks the relationship between two operands. If the relation is true, it returns 1; if the relation is false, it returns value 0.
+
+Relational operators are used in decision making and loops.<h2>
+<table cellpadding="4" cellspacing="4" border='3' align="center" style="text-align:center; background-color:lightpink;border-collapse:collapse">
+<tr>
+<th><H2>OPERATOR</H2></th>
+<th><H2>MEANING OF OPERATOR</H2></th>
+<th><H2>EXAMPLE</H2></th>
+</tr>
+<tr>
+<td><H2>==</H2></td>
+<td><H2>EQUAL TO</H2></td>
+<td><H2>5==3 RETURNS 0</H2></td>
+</tr>
+<tr>
+<td><H2>></H2></td>
+<td><H2>GREATER THAN</H2></td>
+<td><H2>5>3 RETURNS 1</H2></td>
+</tr>
+<tr>
+<td><H2><</H2></td>
+td><H2>LESS THAN</H2></td>
+<td><H2>5<3 RETURNS 0</H2></td>
+</tr>
+<tr>
+<td><H2>!=</H2></td>
+<td><H2>NOT EQUAL TO</H2></td>
+<td><H2>5!=3 RETURNS 1</H2></td>
+</tr>
+<tr>
+<td><H2>>=</H2></td>
+<td><H2>GREATER THAN OR EQUAL TO</H2></td>
+<td><H2>5>=3 RETURNS 1</H2></td>
+</tr>
+<tr>
+<td><H2><=</H2></td>
+<td><H2>LESS THAN OR EQUAL TO</H2></td>
+<td><H2>5<=3 RETURNS 0</H2></td>
+</tr>
+</table>
+<HR>
+<h3 style="text-align:center;font-family:Gill Sans">EXAMPLE: 1--->RELATIONAL OPERATORS---></H3>
+<DIV STYLE="BORDER:6PX SOLID PURPLE">
+<HR>
+<CODE>
+<H4>
+
+// C Program to demonstrate the working of arithmetic operators
+<BR>#include <stdio.h>
+<BR>int main()
+<BR>{
+  <BR>  int a = 5, b = 5, c = 10;
+<BR>
+    printf("%d == %d = %d \n", a, b, a == b); // true
+    <BR>printf("%d == %d = %d \n", a, c, a == c); // false
+<BR>
+    printf("%d > %d = %d \n", a, b, a > b); //false
+    <BR>printf("%d > %d = %d \n", a, c, a > c); //false
+<BR>
+
+    printf("%d < %d = %d \n", a, b, a < b); //false
+    <BR>printf("%d < %d = %d \n", a, c, a < c); //true
+<BR>
+
+    printf("%d != %d = %d \n", a, b, a != b); //false<BR>
+    printf("%d != %d = %d \n", a, c, a != c); //true
+<BR>
+
+    printf("%d >= %d = %d \n", a, b, a >= b); //true<BR>
+    printf("%d >= %d = %d \n", a, c, a >= c); //false
+
+<BR>
+    printf("%d <= %d = %d \n", a, b, a <= b); //true<BR>
+    printf("%d <= %d = %d \n", a, c, a <= c); //true
+<BR>
+    return 0;
+<BR>
+}
+<BR>
+Output
+<BR>
+5 == 5 = 1<BR>
+5 == 10 = 0<BR>
+5 > 5 = 0<BR>
+5 > 10 = 0<BR>
+5 < 5 = 0<BR>
+5 < 10 = 1<BR>
+5 != 5 = 0
+<BR>5 != 10 = 1
+<BR>5 >= 5 = 1
+<BR>5 >= 10 = 0
+<BR>5 <= 5 = 1
+<BR>5 <= 10 = 1 </H4>
